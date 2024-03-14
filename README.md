@@ -66,4 +66,4 @@ python wi_tests.py --sdk --repeat 50
 
 The sample test `wi_tests.py` generates a word (a random string, really) with the wordinfo feature, and then runs the same word over wordinfo to get data about the string.
 
-<script async id="asciicast-C23FovFzQHUv9Gzmzt79VtuXX" src="https://asciinema.org/a/C23FovFzQHUv9Gzmzt79VtuXX.js"></script>
+[![asciicast](https://asciinema.org/a/C23FovFzQHUv9Gzmzt79VtuXX.svg)](https://asciinema.org/a/C23FovFzQHUv9Gzmzt79VtuXX)
