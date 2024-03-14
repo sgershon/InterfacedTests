@@ -18,7 +18,7 @@ Method to create an intermediate layer that lets us cover multiple interfaces wi
 
 ### Other files:
 * `compile.sh` - compiles c++ and binding. Pay attention pybind requires exact paths.
-* .gitignore - git ignore
+* `.gitignore` - git ignore
 * `README.md` - this file 🙃
 
 ![image](https://github.com/sgershon/InterfacedTests/assets/10831143/25ead45c-bb8f-472b-83fc-1173014218da)
