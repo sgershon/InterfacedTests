@@ -18,10 +18,10 @@ std::string generateRandomWord() {
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, letters.length() - 1);
     std::string randomWord;
-    std::uniform_int_distribution<> lenDis(5, 25); // random length between 5 and 10
+    std::uniform_int_distribution<> lenDis(5, 25); // random length between 5 and 25
     int length = lenDis(gen);
     for (int i = 0; i < length; ++i) {
-        randomWord += letters[dis(gen)]; // corrected selection of random letter
+        randomWord += letters[dis(gen)];
     }
     return randomWord;
 }

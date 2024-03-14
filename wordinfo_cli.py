@@ -22,7 +22,7 @@ def word_data(word):
         property_name, value = line.split(': ', 1)
         properties[property_name] = value
 
-    data = Word(properties["Original"], properties["Length"],
+    data = Word(properties["Original"], int(properties["Length"]),
                 properties["Uppercase"], properties["Lowercase"])
 
     return data

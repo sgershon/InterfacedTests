@@ -14,7 +14,7 @@ Method to create an intermediate layer that lets us cover multiple interfaces wi
 * `wordinfo_pybind.cpp` - File with binding info
 * `wordinfo_sdk.py` - Wraps the SDK
 * `wordinfo_cmd.py` - Wraps the command line
-* `wi_tests.py` - all tests, able to run with one or the other
+* `wi_tests.py` - Sample of a test able to run seamlessly with one wrapper or the other
 
 ### Other files:
 * `compile.sh` - compiles c++ and binding. Pay attention pybind requires exact paths.
@@ -45,17 +45,25 @@ g++ -shared -o wordinfo_pybind.so -fPIC -std=c++11 -I<PATH_TO_PYBIND_INCLUDES> w
 
 Once compiled, run tests with:
 ```bash
+# Tests interface via CLI by default:
 python wi_tests.py
-```
 
+# To switch the interface to SDK:
+python wi_tests.py --sdk
+
+# Select the amount of tests to run with:
+python wi_tests.py --sdk --repeat 50
+```
 
 ## Features
 
 - Tests are identical for both interfaces
--- Tests can run 
+-- Tests may run much faster when system calls are avoided
 - Changes in SDK require modifications only to wrapper, not to all tests
 - Changes in CLI require modifications only to wrapper, not to all tests
 
 ## Demo
 
-Insert gif or link to demo
+The sample test `wi_tests.py` generates a word (a random string, really) with the wordinfo feature, and then runs the same word over wordinfo to get data about the string.
+
+<script async id="asciicast-C23FovFzQHUv9Gzmzt79VtuXX" src="https://asciinema.org/a/C23FovFzQHUv9Gzmzt79VtuXX.js"></script>

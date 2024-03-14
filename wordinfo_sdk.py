@@ -9,7 +9,7 @@ def random_word():
 
 def word_data(word):
     info = wordinfo_pybind.getWordInfo(word)
-    data = Word(info.original, info.length, info.uppercase, info.lowercase)
+    data = Word(info.original, int(info.length), info.uppercase, info.lowercase)
     return data
 
 if __name__ == "__main__":
