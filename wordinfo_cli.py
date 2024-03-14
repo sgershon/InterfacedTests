@@ -1,8 +1,8 @@
 from collections import namedtuple
 import subprocess
-from wordinfo_sdk import Word
+from wordinfo_api import Word
 
-cli = "./wordinfo_cmd"
+cli = "./wordinfo_cli"
 
 def random_word():
     result = subprocess.run(cli, capture_output=True, text=True)

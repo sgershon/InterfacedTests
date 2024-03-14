@@ -1,0 +1,21 @@
+@startuml
+package Python {
+  Annotation wi_tests
+  Interface wordinfo_cli
+  Interface wordinfo_api
+  wi_tests <|-- wordinfo_api
+  wi_tests <|-- wordinfo_cli
+}
+package Binding {
+  Interface pybind_cpp
+}
+package CPP {
+  Class wordinfo_cli
+  Interface wordinfo_sdk
+  wordinfo_cli <|-- wordinfo_sdk
+}
+
+Python.wordinfo_api <|-- Binding
+Python.wordinfo_cli <|-- CPP.wordinfo_cli
+Binding.pybind_cpp <|-- CPP.wordinfo_sdk
+@enduml

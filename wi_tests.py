@@ -1,13 +1,13 @@
 import argparse
 
-import wordinfo_sdk
+import wordinfo_api
 import wordinfo_cli
 
 parser = argparse.ArgumentParser(description='Process command line arguments.')
 parser.add_argument('--sdk', action='store_true', help='Use SDK. If flag is absent, will test via CLI.')
 parser.add_argument('--repeats', type=int, default=20, help='Number of tets to run (default: 20).')
 args = parser.parse_args()
-wordinfo = wordinfo_sdk if args.sdk else wordinfo_cli
+wordinfo = wordinfo_api if args.sdk else wordinfo_cli
 
 def test():
     for _ in range(1, args.repeats+1):
