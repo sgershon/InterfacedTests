@@ -6,18 +6,20 @@ Method to create an intermediate layer that lets us cover multiple interfaces wi
 ## Files
 
 ### CPP:
-* wordinfo.h - SDK Headers
-* wordinfo.cpp - SDK Implementation
-* wordinfo_cmd.cpp - Command line that exercises SDK
+* `wordinfo.h` - SDK Headers
+* `wordinfo.cpp` - SDK Implementation
+* `wordinfo_cmd.cpp` - Command line that exercises SDK
 
 ### Python and CPP-Python binding:
-* wordinfo_pybind.cpp - File with binding info
-* wordinfo_sdk.py - Wraps the SDK
-* wordinfo_cmd.py - Wraps the command line
-* wi_tests.py - all tests, able to run with one or the other
+* `wordinfo_pybind.cpp` - File with binding info
+* `wordinfo_sdk.py` - Wraps the SDK
+* `wordinfo_cmd.py` - Wraps the command line
+* `wi_tests.py` - all tests, able to run with one or the other
 
 ### Other files:
-* README.md - this
+* `compile.sh` - compiles c++ and binding. Pay attention pybind requires exact paths.
+* .gitignore - git ignore
+* `README.md` - this file 🙃
 
 ## Compiling and Deployment
 
@@ -39,7 +41,7 @@ pip install pybind11
 g++ -shared -o wordinfo_pybind.so -fPIC -std=c++11 -I<PATH_TO_PYBIND_INCLUDES> wordinfo_pybind.cpp -I<PATH_TO_PYTHON_INCLUDES> -L. -Wl,-rpath='$ORIGIN' <PATH_TO_WORDINFO_SO> -lpython3.10
 ```
 
-(For example, in my system, paths look like `g++ -shared -o wordinfo_pybind.so -fPIC -std=c++11 -I/home/USERNAME/.local/lib/python3.10/site-packages/pybind11/include wordinfo_pybind.cpp -I/usr/include/python3.10 -L. -Wl,-rpath='$ORIGIN' /home/USERNAME/Projects/ctypes_test/pybind11/wordinfo.so -lpython3.10`)
+(For example, in my system, paths look like `g++ -shared -o wordinfo_pybind.so -fPIC -std=c++11 -I/home/${USER}/.local/lib/python3.10/site-packages/pybind11/include wordinfo_pybind.cpp -I/usr/include/python3.10 -L. -Wl,-rpath='$ORIGIN' ./wordinfo.so -lpython3.10`)
 
 Once compiled, run tests with:
 ```bash
