@@ -66,6 +66,8 @@ python wi_tests.py --sdk --repeat 50
 
 ## Demo
 
-The sample test `wi_tests.py` generates a word (a random string, really) with the wordinfo feature, and then runs the same word over wordinfo to get data about the string.
+The sample test `wi_tests.py` generates a word (a random string, really) with the wordinfo feature, and then runs the same word over wordinfo to get data about the string.  
+Note that the same test runs with the same flow via SDK or CLI.  
+Note the different in speed when run in one or the other.  
 
 [![asciicast](https://asciinema.org/a/C23FovFzQHUv9Gzmzt79VtuXX.svg)](https://asciinema.org/a/C23FovFzQHUv9Gzmzt79VtuXX)
