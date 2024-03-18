@@ -43,7 +43,7 @@ pip install pybind11
 g++ -shared -o wordinfo_pybind.so -fPIC -std=c++11 -I<PATH_TO_PYBIND_INCLUDES> wordinfo_pybind.cpp -I<PATH_TO_PYTHON_INCLUDES> -L. -Wl,-rpath='$ORIGIN' <PATH_TO_WORDINFO_SO> -lpython3.10
 ```
 
-(For example, in my system, paths look like `g++ -shared -o wordinfo_pybind.so -fPIC -std=c++11 -I/home/${USER}/.local/lib/python3.10/site-packages/pybind11/include wordinfo_pybind.cpp -I/usr/include/python3.10 -L. -Wl,-rpath='$ORIGIN' ./wordinfo.so -lpython3.10`)
+(For example, in my system, paths look like `g++ -shared -o wordinfo_pybind.so -fPIC -std=c++11 -I/home/${USER}/.local/lib/python3.10/site-packages/pybind11/include wordinfo_pybind.cpp -I/usr/include/python3.10 -L. -Wl,-rpath='$ORIGIN' ./wordinfo_sdk.so -lpython3.10`)
 
 Once compiled, run tests with:
 ```bash
