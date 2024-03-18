@@ -28,10 +28,10 @@ Method to create an intermediate layer that lets us cover multiple interfaces wi
 To compile the SDK and executable:
 
 ```bash
-g++ -c -o wordinfo.o wordinfo.cpp -fPIC
-g++ -shared -o wordinfo.so wordinfo.o
-g++ -c -o wordinfo_cmd.o wordinfo_cmd.cpp
-g++ -o wordinfo_cmd wordinfo_cmd.o -ldl
+g++ -c -o wordinfo_sdk.o wordinfo_sdk.cpp -fPIC
+g++ -shared -o wordinfo_sdk.so wordinfo_sdk.o
+g++ -c -o wordinfo_cli.o wordinfo_cli.cpp
+g++ -o wordinfo_cli wordinfo_cli.o -ldl
 ```
 
 To bind the CPP SDK to Python:
