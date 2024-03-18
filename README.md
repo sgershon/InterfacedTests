@@ -7,13 +7,13 @@ Method to create an intermediate layer that lets us cover multiple interfaces wi
 
 ### CPP:
 * `wordinfo.h` - SDK Headers
-* `wordinfo.cpp` - SDK Implementation
-* `wordinfo_cmd.cpp` - Command line that exercises SDK
+* `wordinfo_sdk.cpp` - SDK Implementation
+* `wordinfo_cli.cpp` - Command line that exercises SDK
 
 ### Python and CPP-Python binding:
 * `wordinfo_pybind.cpp` - File with binding info
 * `wordinfo_api.py` - Wraps the SDK
-* `wordinfo_cmd.py` - Wraps the command line
+* `wordinfo_cli.py` - Wraps the command line
 * `wi_tests.py` - Sample of a test able to run seamlessly with one wrapper or the other
 
 ### Other files:
